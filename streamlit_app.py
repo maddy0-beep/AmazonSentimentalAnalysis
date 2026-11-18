@@ -18,7 +18,7 @@ if st.button('Analyze Sentiment'):
         with st.spinner("Analyzing..."):
 
             response=requests.post(
-                "http://127.0.0.1:5000/predict",
+                "https://amazonsentimentalanalysis.onrender.com/predict",
                 json={"reviews": review}
             )
             result=response.json()
